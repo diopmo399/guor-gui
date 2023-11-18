@@ -50,7 +50,6 @@ int main() {
                     char service;
                     float salairebrut;
                     int position;
-                    char choix;
 
                     switch (choixMAJ) {
                         case 1:
