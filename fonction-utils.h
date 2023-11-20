@@ -4,6 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
+#include <time.h>
+
 
 struct date {
     int jour;
@@ -43,5 +46,27 @@ void afficher_liste(liste_emp LE);
 bool matricule_unique(liste_emp LE, int mat);
 void CREATION(liste_emp *LE);
 int obtenirMatiricule(liste_emp  *LE);
+void supprimer_employes_service(liste_emp *LE, char service);
+void modifier_donnees_employe(liste_emp *LE, int mat, int choix);
+
+// fonction calcul salaire
+
+float CNSS(struct employe emp);
+float Impots(struct employe emp);
+float Salaire_Net(struct employe emp);
+float Somme_CNSS(liste_emp LE);
+float Somme_Salaires_Bruts(liste_emp LE);
+void Liberer_Memoire(liste_emp LE);
+void Afficher_Salaires_Nets(liste_emp LE);
+void recherche_par_matricule(liste_emp LE);
+void recherche_par_nom(liste_emp LE);
+void recherche_par_telephone(liste_emp LE);
+void recherche_annee_bissextile(liste_emp LE);
+void recherche_embauche_annee_bissextile(liste_emp LE);
+void comparaison_date_embauche(liste_emp LE);
+void recherche_retraite_proche(liste_emp LE);
+void recherche_par_indicatif(liste_emp LE);
+void TRI1(liste_emp LE);
+void TRI2(liste_emp *LE);
 
 #endif /* EMPLOYE_H */
